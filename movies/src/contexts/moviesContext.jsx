@@ -39,7 +39,11 @@ const [playlist, setPlaylist] = useState ([]);
   setPlaylist(newPlaylist);
 };
 
-
+const removeFromPlaylist = (movie) => {
+    setFavorites( favorites.filter(
+      (mId) => mId !== movie.id
+    ) )
+  };
 
 
     const addReview = (movie, review) => {
@@ -56,7 +60,7 @@ const [playlist, setPlaylist] = useState ([]);
         removeFromFavorites,
         playlist,
         addToPlaylist,
-        
+        removeFromFavorites,
         addReview,
       }}
     >
