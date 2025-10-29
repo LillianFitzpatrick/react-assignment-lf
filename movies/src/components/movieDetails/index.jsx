@@ -10,6 +10,9 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
+import { Link } from "react-router";
+import MovieFilterIcon from "@mui/icons-material/MovieFilter";
+
 
 
 const root = {
@@ -60,7 +63,20 @@ const [drawerOpen, setDrawerOpen] = useState(false);
           label={`${movie.vote_average} (${movie.vote_count})`}
         />
         <Chip label={`Released: ${movie.release_date}`} />
+
+        <Chip
+        component={Link}
+        to={`/movies/${movie.id}/recommendations`}
+        icon={<MovieFilterIcon />}
+        label="Recommendations"
+        clickable
+        
+        color="secondary"
+        />
       </Paper>
+
+
+      
             <Fab
         color="secondary"
         variant="extended"
