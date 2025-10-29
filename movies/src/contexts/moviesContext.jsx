@@ -35,6 +35,7 @@ const [playlist, setPlaylist] = useState ([]);
   } else {
     newPlaylist = [...playlist];
   }
+  console.log("Playlist updated:", newPlaylist); 
   setPlaylist(newPlaylist);
 };
 

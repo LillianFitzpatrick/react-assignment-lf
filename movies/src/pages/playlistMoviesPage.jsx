@@ -4,6 +4,8 @@ import { MoviesContext } from "../contexts/moviesContext";
 import { useQueries } from "@tanstack/react-query";
 import { getMovie } from "../api/tmdb-api";
 import Spinner from '../components/spinner'
+import WriteReview from "../components/cardIcons/writeReview";
+import RemoveFromPlaylistIcon from "../components/cardIcons/removeFromPlaylist";
 
 
 
@@ -43,7 +45,7 @@ const PlaylistMoviesPage = () => {
       action={(movie) => {
         return (
           <>
-            
+            <RemoveFromPlaylistIcon movie={movie} />
             <WriteReview movie={movie} />
           </>
         );
