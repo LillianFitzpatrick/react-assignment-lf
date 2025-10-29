@@ -13,6 +13,7 @@ import AddMovieReviewPage from './pages/addMovieReviewPage'
 import NowPlayingPage from "./pages/nowPlayingPage";
 import PopularMoviesPage from "./pages/popularMoviesPage";
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
+import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 
 
 
@@ -43,6 +44,7 @@ const App = () => {
                     <Route path="/movies/now-playing" element={<NowPlayingPage />} />
                     <Route path="/movies/popular" element={<PopularMoviesPage />} />
                     <Route path="/movies/toprated" element={<TopRatedMoviesPage />} />
+                    <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
                     
 
           </Routes>
