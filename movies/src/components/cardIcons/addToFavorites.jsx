@@ -9,6 +9,7 @@ const AddToFavoritesIcon = ({ movie }) => {
   const handleAddToFavorites = (e) => {
     e.preventDefault();
     context.addToFavorites(movie);
+    console.log("Added to playlist:", movie.id, movie.title);
   };
 
   return (

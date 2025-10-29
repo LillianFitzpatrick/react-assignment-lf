@@ -19,19 +19,6 @@ const [playlist, setPlaylist] = useState ([]);
     setFavorites(newFavorites)
   };
 
-  const addToPlaylist = (movie) => {
-    let newPlaylist = [];
-    if(!playlist.includes(movie.id)){
-      newPlaylist = [...playlist, movie.id];
-    } else {
-      newPlaylist = [...playlist];
-    }
-    setPlaylist(newPlaylist);
-    }
-
-
-  
-
   
   
   // We will use this function in the next step
@@ -41,12 +28,18 @@ const [playlist, setPlaylist] = useState ([]);
     ) )
   };
 
-  // Remove from Playlist
-  const removeFromPlaylist = (movie) => {
-    setPlaylist( playlist.filter(
-      (mId) => mId !== movie.id
-    ) )
-  }; 
+  const addToPlaylist = (movie) => {
+  let newPlaylist = [];
+  if (!playlist.includes(movie.id)) {
+    newPlaylist = [...playlist, movie.id];
+  } else {
+    newPlaylist = [...playlist];
+  }
+  setPlaylist(newPlaylist);
+};
+
+
+
 
     const addReview = (movie, review) => {
     setMyReviews( {...myReviews, [movie.id]: review } )
@@ -62,7 +55,7 @@ const [playlist, setPlaylist] = useState ([]);
         removeFromFavorites,
         playlist,
         addToPlaylist,
-        removeFromPlaylist,
+        
         addReview,
       }}
     >
@@ -71,7 +64,7 @@ const [playlist, setPlaylist] = useState ([]);
   );
 
 
-};
+}
 
 
 export default MoviesContextProvider;
