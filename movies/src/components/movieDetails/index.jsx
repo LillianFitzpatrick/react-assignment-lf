@@ -12,6 +12,7 @@ import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
 import { Link } from "react-router";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
+import PeopleIcon from "@mui/icons-material/People";
 
 
 
@@ -73,7 +74,20 @@ const [drawerOpen, setDrawerOpen] = useState(false);
         
         color="secondary"
         />
+
+        <Chip
+        component={Link}
+        to={`/movies/${movie.id}/credits`}
+        icon={<PeopleIcon />}
+        label="Cast"
+        clickable
+        color="secondary"
+/>
+
+
       </Paper>
+
+
 
 
       
