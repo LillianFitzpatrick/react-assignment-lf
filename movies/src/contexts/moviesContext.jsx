@@ -60,7 +60,7 @@ const removeFromPlaylist = (movie) => {
         removeFromFavorites,
         playlist,
         addToPlaylist,
-        removeFromFavorites,
+        removeFromPlaylist,
         addReview,
       }}
     >
