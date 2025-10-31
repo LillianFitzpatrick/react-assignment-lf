@@ -6,6 +6,7 @@ import { getMovie } from '../api/tmdb-api'
 import { useQuery } from '@tanstack/react-query';
 import Spinner from '../components/spinner'
 // import useMovie from "../hooks/useMovie";   Redundant
+import Box from "@mui/material/Box";
 
 
 
@@ -29,9 +30,11 @@ const MoviePage = (props) => {
     <>
       {movie ? (
         <>
+        <Box sx={{ bgcolor: "#fff0f3ff" }}>
           <PageTemplate movie={movie}>
             <MovieDetails movie={movie} />
           </PageTemplate>
+          </Box>
         </>
       ) : (
         <p>Waiting for movie details</p>

@@ -6,6 +6,7 @@ import { getMovie } from "../api/tmdb-api";
 import Spinner from '../components/spinner'
 import WriteReview from "../components/cardIcons/writeReview";
 import RemoveFromPlaylistIcon from "../components/cardIcons/removeFromPlaylist";
+import Box from "@mui/material/Box";
 
 
 
@@ -39,6 +40,7 @@ const PlaylistMoviesPage = () => {
 
   
     return (
+      <Box sx={{ bgcolor: "#fff0f3ff" }}>
     <PageTemplate
       title="My Playlist"
       movies={movies}
@@ -51,6 +53,7 @@ const PlaylistMoviesPage = () => {
         );
       }}
     />
+    </Box>
   );
 
 };

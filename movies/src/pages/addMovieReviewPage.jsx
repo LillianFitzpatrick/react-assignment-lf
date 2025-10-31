@@ -5,6 +5,8 @@ import { useLocation } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import { getMovie } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
+import Box from "@mui/material/Box";
+
 
 const WriteReviewPage = (props) => {
   const location = useLocation();
@@ -23,9 +25,11 @@ const WriteReviewPage = (props) => {
     return <h1>{error.message}</h1>;
   }
   return (
+    <Box sx={{ bgcolor: "#fff0f3ff" }}>
     <PageTemplate movie={movie}>
       <ReviewForm movie={movie} />
     </PageTemplate>
+    </Box>
   );
 };
 

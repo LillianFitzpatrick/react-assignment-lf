@@ -5,6 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import Spinner from "../components/spinner";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 import { getMovieRecommendations } from "../api/tmdb-api";
+import Box from "@mui/material/Box";
 
 const MovieRecommendations = () => {
   const { id } = useParams();
@@ -20,11 +21,13 @@ const MovieRecommendations = () => {
   const movies = data.results;
 
   return (
+    <Box sx={{ bgcolor: "#fff0f3ff" }}>
     <PageTemplate
       title="Recommended Movies"
       movies={movies}
       action={(movie) => <AddToFavoritesIcon movie={movie} />}
     />
+    </Box>
   );
 };
 

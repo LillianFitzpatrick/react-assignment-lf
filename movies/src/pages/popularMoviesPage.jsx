@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist'
+import Box from "@mui/material/Box";
 
 
 const PopularMoviesPage = (props) => {
@@ -30,6 +31,7 @@ const PopularMoviesPage = (props) => {
   const addToFavorites = (movieId) => true 
 
      return (
+      <Box sx={{ bgcolor: "#fff0f3ff" }}>
       <PageTemplate
         title="Popular Movies"
         movies={movies}
@@ -37,6 +39,7 @@ const PopularMoviesPage = (props) => {
           return <AddToPlaylistIcon movie={movie} />
         }}
       />
+      </Box>
   );
 
 };

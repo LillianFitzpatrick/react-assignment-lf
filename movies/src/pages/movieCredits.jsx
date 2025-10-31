@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import Spinner from "../components/spinner";
 import { getMovieCredits } from "../api/tmdb-api";
+import Box from "@mui/material/Box";
 
 const MovieCredits = () => {
   const { id } = useParams();
@@ -18,7 +19,8 @@ const MovieCredits = () => {
   const cast = data.cast;
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <Box sx={{ bgcolor: "#fff0f3ff" }}>
+    <div style={{ padding: "1rem"}}>
       <h2>Cast</h2>
       <ul>
         {cast.map((person) => (
@@ -30,6 +32,7 @@ const MovieCredits = () => {
         ))}
       </ul>
     </div>
+    </Box>
   );
 };
 
