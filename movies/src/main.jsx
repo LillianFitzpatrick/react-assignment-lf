@@ -19,6 +19,12 @@ import MovieRecommendations from "./pages/movieRecommendations";
 import MovieCredits from "./pages/movieCredits";
 import PlaylistMoviesPage from "./pages/playlistMoviesPage";
 
+// adding theming using https://mui.com/material-ui/customization/theming/
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+
+
 
 
 
@@ -32,10 +38,35 @@ const queryClient = new QueryClient({
   },
 });
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#ffb1cdff",
+    },
+    secondary: {
+      main: "#fc9ec1ff",
+    },
+    background: {
+      default: "#c57c96ff",
+    },
+    
+    
+    
+  },
+  //added a google font, imported to index.html
+  typography: {
+      fontFamily: "'Playfair Display', serif",
+    },
+
+
+
+
+});
 
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
       <BrowserRouter>
         <SiteHeader />
         <MoviesContextProvider>
@@ -62,6 +93,7 @@ const App = () => {
         </MoviesContextProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
+      </ThemeProvider>
     </QueryClientProvider>
   );
 };
