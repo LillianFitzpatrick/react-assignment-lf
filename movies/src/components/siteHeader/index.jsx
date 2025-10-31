@@ -48,7 +48,7 @@ const SiteHeader = () => {
   return (
     <>
       <AppBar position="fixed" 
-      sx={{ bgcolor: "#f392b6ff", color: "white" }}
+      sx={{ bgcolor: "#f392b6ff", color: "#fcd5e3ff" }}
       >
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
