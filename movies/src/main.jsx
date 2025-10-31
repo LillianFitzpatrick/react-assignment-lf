@@ -20,6 +20,8 @@ import MovieCredits from "./pages/movieCredits";
 import PlaylistMoviesPage from "./pages/playlistMoviesPage";
 
 // adding theming using https://mui.com/material-ui/customization/theming/
+// also used https://mui.com/material-ui/customization/typography/
+// + https://v4.mui.com/customization/typography/
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 
@@ -49,6 +51,13 @@ const theme = createTheme({
     background: {
       default: "#c57c96ff",
     },
+    text: {
+      primary: "#8b123fff",
+      secondary: "#8b123fff",
+    },
+    
+
+
     
     
     
@@ -56,6 +65,10 @@ const theme = createTheme({
   //added a google font, imported to index.html
   typography: {
       fontFamily: "'Playfair Display', serif",
+      allVariants: {
+      color: "#8b123f", 
+    },
+
     },
 
 

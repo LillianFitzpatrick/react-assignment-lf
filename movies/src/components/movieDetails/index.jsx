@@ -72,7 +72,7 @@ const [drawerOpen, setDrawerOpen] = useState(false);
         label="Recommendations"
         clickable
         
-        color="secondary"
+        sx={{color: "#8b123f"}}
         />
 
         <Chip
@@ -81,7 +81,7 @@ const [drawerOpen, setDrawerOpen] = useState(false);
         icon={<PeopleIcon />}
         label="Cast"
         clickable
-        color="secondary"
+        sx={{color: "#8b123f"}}
 />
 
 
