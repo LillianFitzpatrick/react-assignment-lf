@@ -5,6 +5,11 @@ import Spinner from "../components/spinner";
 import { getMovieCredits } from "../api/tmdb-api";
 import Box from "@mui/material/Box";
 
+
+//movie credits - displays on movie details page, and once clicked-
+// it shows a list of the cast members, and the roles they play in the movie
+//links from the actors name to their TMDB page.
+
 const MovieCredits = () => {
   const { id } = useParams();
 
@@ -18,6 +23,8 @@ const MovieCredits = () => {
 
   const cast = data.cast;
 
+  // Links the actor's name to their TMDB page, via their person.id from TMBD
+  // Shows the character that they played in the movie via person.character
   return (
     <Box sx={{ bgcolor: "#fff0f3ff" }}>
     <div style={{ padding: "1rem"}}>

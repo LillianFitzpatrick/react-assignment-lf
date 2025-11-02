@@ -7,6 +7,8 @@ import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
 import { getMovieRecommendations } from "../api/tmdb-api";
 import Box from "@mui/material/Box";
 
+// Parameterised Endpoint Recommendations 
+//Gives recommendations based on the movie's id you click the recommendations button from.
 const MovieRecommendations = () => {
   const { id } = useParams();
 

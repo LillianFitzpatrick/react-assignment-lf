@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { MoviesContext } from "../../contexts/moviesContext";
 
+//created a remove from playlist icon, similar to the remove from favorites!
 const RemoveFromPlaylistIcon = ({ movie }) => {
   const context = useContext(MoviesContext);
 

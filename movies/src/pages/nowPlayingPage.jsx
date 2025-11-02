@@ -6,6 +6,7 @@ import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
 import Box from "@mui/material/Box";
 
+//New nowPlaying page - Closely follows the same layout as homePage.jsx
 const NowPlayingPage = (props) => {
 
   const { data, error, isPending, isError } = useQuery({

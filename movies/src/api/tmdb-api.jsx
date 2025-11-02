@@ -91,6 +91,9 @@ export const getMovie = (args) => {
    });
   };
 
+  // Below are all the exports for the new pages included in the assignment,
+  //they each follow the same layout as the ones previously done in the labs! :-)
+
   export const getNowPlayingMovies = () => {
   return fetch(
     `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`

@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 import Box from "@mui/material/Box";
+//New upcoming movies page - Closely follows the same layout as homePage.jsx
 
 const UpcomingMoviesPage = (props) => {
 

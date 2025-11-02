@@ -3,6 +3,7 @@ import { MoviesContext } from "../../contexts/moviesContext";
 import IconButton from "@mui/material/IconButton";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 
+// Made an add to playlist icon, similar to the add to favorites one
 const AddToPlaylistIcon = ({ movie }) => {
   const context = useContext(MoviesContext);
 

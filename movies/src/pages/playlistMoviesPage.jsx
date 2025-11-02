@@ -8,7 +8,7 @@ import WriteReview from "../components/cardIcons/writeReview";
 import RemoveFromPlaylistIcon from "../components/cardIcons/removeFromPlaylist";
 import Box from "@mui/material/Box";
 
-
+//New playlist page - Closely follows the same layout as the favorites page!
 
 const PlaylistMoviesPage = () => {
   const { playlist: movieIds } = useContext(MoviesContext);

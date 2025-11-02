@@ -7,6 +7,7 @@ import AddToFavoritesIcon from '../components/cardIcons/addToFavorites'
 import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist'
 import Box from "@mui/material/Box";
 
+//New Popular Movies page - Closely follows the same layout as homePage.jsx
 
 const PopularMoviesPage = (props) => {
 
